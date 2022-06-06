@@ -1,0 +1,19 @@
+{% extends "records/head.html" %} {% load static %}{% block title %} School Records
+{% endblock%} {% block content%}
+<div class="container">
+<h1>Add a record</h1>
+
+{% if submitted %}
+  <h3>You have successfully added a new record!</h3>
+{% else %}
+  <form action='' method="POST">
+    {%  csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit" class="btn btn-secondary">
+
+  </form>
+{% endif %}
+</div>
+{% endblock %}

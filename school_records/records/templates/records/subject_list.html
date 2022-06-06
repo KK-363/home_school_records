@@ -1,0 +1,27 @@
+{% extends "records/head.html" %} {% load static %}{% block title %} School Records
+{% endblock%} {% block content%}
+<div class="container">
+<h1>Subjects</h1>
+{% for subject in subjects %}
+<table class="center">
+  <tr>
+    <td class="third">
+       
+      <a href="/subjects/{{subject.name}}">{{ subject.name}}</a>
+      
+    </td>
+
+    <td class="third">
+      <a href="/subjects/{{subject.id}}/">Update</a>
+    </td>
+
+    <td class="third">
+      <a href="/delete/{{subject.id}}/">Delete</a>
+    </td>
+
+  </tr>
+</table>
+{% endfor %}
+  
+</div>
+{% endblock %}

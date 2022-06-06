@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <style>
+            body {
+                background-color: blanchedalmond;
+            }
+            .container, .nav-links {
+               width: 600px; 
+               border-radius: 2em;
+               padding: 15px;
+               margin-left: 50px;
+               margin-right: 50px;
+               margin: auto;
+            }
+
+            .nav-links {
+                text-align: center;
+            }
+
+            .container {
+                background-color:rgb(155, 187, 247);
+            }
+
+            h1, h2, h3, li, h5, td {
+                color:indigo;
+            }
+
+            h1, h2, h3, h5 {
+                text-align: center;
+            }
+
+            .right_align {
+                text-align: right;
+            }
+
+            .third {
+                width: 33%;
+            }
+
+            .two-third {
+                width: 80%;
+            }
+
+           table {
+               width: 90%;
+           }
+
+           table.center{
+               margin-left: auto;
+               margin-right: auto;
+           }
+        </style>
+    </head>
+    <body>
+        
+        <div class="nav-links">
+            <a href="../">Home</a>
+            | <a href="/students">View all Students</a>
+            | <a href="/subjects">View all Subjects</a>
+            | <a href="/records">View all Records</a><br><br>
+            <a href="/add_student">Add a Student</a>
+            | <a href="/add_subject">Add a Subject</a>
+            | <a href="/add_record">Add a Record</a>
+            | <a href="/record">Calculate time spent</a>
+        </div>
+        </br></br>
+        <div class="body-content">{% block content %}{% endblock content %}</div>
+    </body>
+
+</html>

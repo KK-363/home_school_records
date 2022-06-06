@@ -1,0 +1,12 @@
+{% extends "records/head.html" %} {% load static %}{% block title %} School Records
+{% endblock%} {% block content%}
+<div class="container">
+<h2>{{ subject.name }}</h2>
+
+<ul>
+  {% for student in students %}
+  <li>{{ student.first_name }}  {{ student.last_name }} </li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}

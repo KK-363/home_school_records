@@ -1,0 +1,23 @@
+{% extends "records/head.html" %} {% load static %}{% block title %} School Records
+{% endblock%} {% block content%}
+<div class="container">
+
+<h1>Current Students</h1>
+{% for student in students %}
+<table class="center">
+  <tr>
+    <td class="third">
+       
+      <a href="/students/{{student.first_name}}">{{ student.first_name}} {{ student.last_name}}</a>
+      
+    </td>
+
+    <td class="third">
+      <a href="/students/{{student.id}}/">Update</a>
+    </td>
+  </tr>
+</table>
+  
+  {% endfor %}
+</div>
+{% endblock %}

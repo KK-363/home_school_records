@@ -1,0 +1,29 @@
+{% extends "records/head.html" %} {% load static %}{% block title %} School Records
+{% endblock%} {% block content%}
+<div class="container">
+
+  <h1>Calculate time spent</h1>
+
+  {% if record %}
+
+  <h3>{{ student.first_name }} {{ student.last_name }}
+    spent {{ time_spent.sum }} hours on  {{ subject.name }}
+    in {{ date }}
+  </h3>
+
+  {% endif %}
+    
+  <form action='' method="POST">
+    {%  csrf_token %}
+    
+    <input type="text" placeholder="first name" name="fname" required/><br><br>
+    <input type="text" placeholder="subject name" name="sname" required/><br><br>
+    <input type="text" placeholder="2022" name="year" required/><br><br>
+    <input type="text" placeholder="01" name="month" required/><br><br>
+          
+    <input type="submit" value="Submit">
+
+  </form>
+
+</div>
+{% endblock %}

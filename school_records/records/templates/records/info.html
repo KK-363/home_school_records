@@ -1,0 +1,43 @@
+{% extends "records/head.html" %} {% load static %}{% block title %} School Records
+{% endblock%} {% block content%}
+<div class="container">
+
+     <h1>Information</h1>
+     <h3>Below there is information on how to use School Records
+          which has been designed to help homeschooling parents keep 
+          track of the hours their child(ren) spend on different subjects 
+          and activities during the year.</h3>
+
+     <p>
+          To view all subjects a student is currently taking goto
+          <a href="/students">here</a> and add the 
+          student's name to the end of the url<br>
+          Example: /students/Mari/
+     </p>
+
+     <p>
+          To view all students currently a specific subject go
+          <a href="/subjects">here</a> and add the 
+          subject name to the end of the url<br>
+          Example: /students/History/
+     </p>
+
+     <p>
+          To view all subjects a student is currently taking go
+          <a href="/students">here</a> and add the 
+          students name to the end of the url<br>
+          Example: /students/Mari/
+     </p>
+
+     <p>
+          To view how much time a student has time
+          on a speficic subject in a certain month/year go
+          <a href="/records">here</a> and add the 
+          students name, subjects name, year and month 
+          to the end of the url<br>
+          Example: /records/Mari/History/2022/05/
+     </p>
+
+     </br>
+</div>
+{% endblock %}
